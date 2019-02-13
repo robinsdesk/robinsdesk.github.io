@@ -12,5 +12,3 @@ A big draw for me to intern at here was their range of projects – bilingual pu
 I was able to contribute to on-going projects overseen by the production team, both internal and external. Better yet, I got to interact with a talented group of people from different cultural backgrounds – Irish, Australian, French, New Zealand, Japanese, and American. Along with me, a Chinese American, it made for an incredibly diverse workplace.
 
 My time here has shown me the value of seeking out a diverse team. As the world becomes more and more globalized, having a diverse team able to work with clients from all kinds of backgrounds, and deliver bilingual products that appeal to multiple audiences, is a big advantage.
-
-*07/24/14*
