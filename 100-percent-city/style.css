@@ -1,0 +1,536 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* { margin:0;
+padding:0; }
+
+/*------------------------------
+COMMENT TEMPLATE
+-------------------------------*/
+
+/*-------------------------------------------ALL PAGES------------------------------------------*/
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+
+    padding-right:0; 
+    padding-left: 0; 
+}
+
+
+
+body {
+
+	background-repeat:repeat;
+	background-color:#020202;
+}
+
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+	}
+	
+.section-description {
+	
+	text-align:center;
+}
+
+.row {
+	
+	margin: 40px 0;
+	
+}
+
+
+/*-----------------
+Introduction Section
+------------------*/
+
+.intro {
+	
+	
+	text-align:center;
+	margin: 0 0;
+}
+
+span {
+	
+	background-color:black;
+	padding: 4px 0px;
+}
+	
+/*-----------------
+Typography
+------------------*/
+
+h1 {
+	font-family: 'Sue Ellen Francisco', cursive;
+	text-align: center;
+	font-size:11em;
+	letter-spacing:2px;
+	text-transform:uppercase;
+	color:#90A341;
+	padding-top: 100px;
+	line-height: 1.2;
+	
+	}
+
+h2 {
+	font-family: 'Assistant', sans-serif;
+	font-size: 4.4em;
+	font-weight:bolder;
+	color:#777A8C;
+	line-height: 1.1;
+	background: -webkit-linear-gradient(#2F2F2F, #808041);
+	padding: 0 25px;
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+
+	}
+
+h3 {
+	font-family: 'Sue Ellen Francisco', cursive;
+	text-align: center;
+	font-size:1.75em;
+	text-transform:uppercase;
+	color:#90A341;
+	line-height: 1.4;
+}
+
+h4 {
+	font-family: 'Assistant', sans-serif;
+	font-size: 4.4em;
+	font-weight:bolder;
+	color:#777A8C;
+	line-height: 1.1;
+	background: -webkit-linear-gradient(#2F2F2F, #808041);
+	padding: 0 25px;
+	text-align:right;
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+
+	}
+
+p {
+	font-family: 'Assistant', sans-serif;
+	font-size:1.2em;
+	font-weight:100;
+	color:#777A8C;
+	line-height: 1.7;
+	padding: 0 15px;
+
+	
+	}
+
+/*-----------------
+Logo & Nav Bar
+------------------*/
+
+.logo {
+	
+	background:url(images/logo.png) no-repeat center center;
+	background-size:contain;
+	padding: 20px;
+	
+	}
+
+h3.menu-item {
+	font-size:1em;
+	font-family: 'Sue Ellen Francisco', cursive;
+	text-align: center;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	overflow: hidden;
+	background-color:#020202;
+    
+	position: fixed;
+    top: 0;
+    width: 100%;
+	z-index:1;
+	opacity:0.85;
+}
+
+
+li {
+    display: inline;
+    float: right;
+	padding: 0px 8px;
+	}
+
+
+li a {
+  
+    color: #90A341;
+    text-align: center;
+    text-decoration: none;
+	list-style-type: none;
+}
+
+li.divider {
+	margin: -9px 5px;
+}
+
+li :hover {
+	color: white;
+	text-decoration: none;
+}
+
+li :active {
+	color: white;
+	text-decoration: none;
+}
+
+a:focus {
+	color: white;
+	text-decoration: none;
+}
+
+
+
+
+/*-----------------------------------------INTRO -----------------------------------------*/
+
+
+.video-wrapper {
+	position:relative;
+	z-index:-1;
+}
+
+.video-title {
+	position:absolute;
+	z-index:2;
+    text-align: center;
+	padding: 10% 50px;
+	width:100%;
+}
+
+#Container {width: 100%; height: 360px; position: relative;}
+#Video,#Message {width: 100%; height: 360px; top: 0; left: 0;}
+#Message {text-shadow: 2px 2px 2px #000000; color:white; }
+#Message h1{font-size: 3em;color:#ffffff;text-align:center; padding:0.4em;}
+
+/*-----------------------------------------ABOUT -----------------------------------------*/
+
+.special {
+	
+	background: #292929;
+	background:-webkit-linear-gradient(left top, #292929, #000000);
+	background: -o-linear-gradient(bottom right, #292929, #000000);
+	background: -moz-linear-gradient(bottom right, #292929, #000000);
+	background: linear-gradient(to bottom right, #292929, #000000);
+	padding: 50px 0;
+	text-align:center;
+}
+
+.special .col-md-4{
+	
+	
+}
+
+
+.special .col-md-3{
+	
+	
+}
+
+
+.image-cropper {
+   	width: 140px;
+    height: 140px;
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+	margin: 0 auto;
+	
+}
+
+.image-cropper img {
+    display: inline;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
+
+
+
+/*--------------------------------------PROCESS----------------------------------*/
+
+
+.stat {margin:65px 0}
+
+.stat p{
+	padding:0 20%;
+	text-align:center;
+}
+
+.circle {
+   
+    border:5px solid #1A1A1A;    
+    height:200px;
+	width:200px;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+	border-radius:50%;
+	margin: 0 auto;
+	padding: 30px 50px;
+	background-color:black;
+
+}
+
+
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*--------------------------------------PERFORMANCE----------------------------------*/
+
+
+.circle2 {
+   
+    border:5px solid #1A1A1A;    
+    height:200px;
+	width:200px;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+	border-radius:50%;
+	margin: 0 auto;
+	padding: 30px 10px;
+	background-color:black;
+
+}
+
+.background-video {
+	background:url(images/banner3.jpg);
+	background-repeat: no-repeat;
+  	background-size: cover;
+	height: 450px;
+}
+
+
+.year {
+	font-family: 'Sue Ellen Francisco', cursive;
+	font-size:1 em;
+	text-transform:uppercase;
+	color:#90A341;
+	padding: 0 4px;
+	letter-spacing: 2.5px;
+		}
+		
+.banner3 {
+	
+	background:url(images/banner3.jpg) no-repeat center ;
+	width:100%;
+	height:500px;
+	}
+
+.banner4 {
+	
+	background:url(images/banner4.png) no-repeat top ;
+	width:100%;
+	height:500px;
+	}
+	
+.carousel-content {
+    color:black;
+    align-items:center;
+}
+
+#text-carousel {
+  width: 100%;
+  height: auto;
+}
+
+
+/*--------------------------------------RECEPTION----------------------------------*/
+
+.icons a {
+	
+	color:#777A8C;
+	font-size:2em;
+}
+
+.icons a:hover {
+	
+	color:#90A341;
+}
+
+i {
+	
+	margin: 0 10px;
+	
+}
+
+.contact-info {
+	
+	margin-bottom: 70px;
+	text-align:center;
+	
+}
+  
+/*--------------------------------------RESPONSIVE / MEDIA QUERY----------------------------------*/
+
+
+@media only screen and (max-width : 1200px) {
+
+	ul#mobile {
+	
+	display:none;
+}
+	
+}
+
+@media only screen and (max-width : 992px) {
+	
+
+
+
+}
+
+
+
+
+@media only screen and (max-width : 768px) {
+	
+
+	
+h1 {
+
+	text-align: center;
+	font-size:7em;
+	letter-spacing:2px;
+	line-height: 1.2;
+	
+	}
+
+h2 {
+	font-size: 4em;
+	padding: 0 25px;
+	text-align:left;
+
+	}
+
+h3 {
+	
+	text-align: center;
+	font-size:1.75em;
+	line-height: 1.4;
+}
+
+h4 {
+	font-size: 4em;
+	padding: 0 25px;
+	text-align:left;
+
+	}
+
+p {
+	
+	font-size:1.15em;
+
+	
+	}
+	
+	
+}
+
+
+
+@media only screen and (max-width : 480px) {
+	
+
+
+
+}
+
+
+@media only screen and (max-width: 420px) {
+
+ul {
+	
+	height: 100%;
+    padding: 10% 0;
+	
+}
+
+
+
+ul#non-mobile{
+	display:none;
+	
+}
+	
+ul#mobile {
+	
+	display:block;
+}
+
+
+li {
+		
+  	display: block; 
+    float:none;
+		
+	}
+	
+
+h1 {
+
+	text-align: center;
+	font-size:5em;
+	letter-spacing:2px;
+	line-height: 1.2;
+	
+	}
+
+h2 {
+	font-size: 3em;
+	padding: 0 25px;
+	text-align:left;
+
+	}
+
+h3 {
+	
+	text-align: center;
+	font-size:1.75em;
+	line-height: 1.4;
+}
+
+h4 {
+	font-size: 3em;
+	padding: 0 25px;
+	text-align:left;
+
+	}
+
+p {
+	text-align:center;
+	font-size:1.3em;
+
+	
+	}
+
+}
+
+        
