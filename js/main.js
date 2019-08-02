@@ -1,66 +1,90 @@
-window.onload = function() {
+jQuery(document).ready(function($){
+	var mainHeader = $('.cd-auto-hide-header'),
+		secondaryNavigation = $('.cd-secondary-nav'),
+		//this applies only if secondary nav is below intro section
+		belowNavHeroContent = $('.sub-nav-hero'),
+		headerHeight = mainHeader.height();
+	
+	//set scrolling variables
+	var scrolling = false,
+		previousTop = 0,
+		currentTop = 0,
+		scrollDelta = 10,
+		scrollOffset = 150;
 
-    var $menuIcon = document.getElementsByClassName('menu-icon')[0],
-        $offCanva = document.getElementsByClassName('off-canvas')[0];
-        $siteWrap = document.getElementsByClassName('site-wrapper')[0];
+	mainHeader.on('click', '.nav-trigger', function(event){
+		// open primary navigation on mobile
+		event.preventDefault();
+		mainHeader.toggleClass('nav-open');
+	});
 
-    $menuIcon.addEventListener('click', function() {
-        toggleClass($menuIcon, 'close');
-        toggleClass($offCanva, 'toggled');
-        toggleClass($siteWrap, 'open');
-    }, false);
+	$(window).on('scroll', function(){
+		if( !scrolling ) {
+			scrolling = true;
+			(!window.requestAnimationFrame)
+				? setTimeout(autoHideHeader, 250)
+				: requestAnimationFrame(autoHideHeader);
+		}
+	});
 
-    $menuIcon.addEventListener('mouseenter', function() {
-        addClass($menuIcon, 'hover');
-    });
+	$(window).on('resize', function(){
+		headerHeight = mainHeader.height();
+	});
 
-    $menuIcon.addEventListener('mouseleave', function() {
-        removeClass($menuIcon, 'hover');
-    });
+	function autoHideHeader() {
+		var currentTop = $(window).scrollTop();
 
-    function addClass(element, className) {
-        element.className += " " + className;
-    }
+		( belowNavHeroContent.length > 0 ) 
+			? checkStickyNavigation(currentTop) // secondary navigation below intro
+			: checkSimpleNavigation(currentTop);
 
-    function removeClass(element, className) {
-        // Capture any surrounding space characters to prevent repeated
-        // additions and removals from leaving lots of spaces.
-        var classNameRegEx = new RegExp("\\s*" + className + "\\s*");
-        element.className = element.className.replace(classNameRegEx, " ");
-    }
+	   	previousTop = currentTop;
+		scrolling = false;
+	}
 
-    function toggleClass(element, className) {
-        if (!element || !className) {
-            return;
-        }
+	function checkSimpleNavigation(currentTop) {
+		//there's no secondary nav or secondary nav is below primary nav
+	    if (previousTop - currentTop > scrollDelta) {
+	    	//if scrolling up...
+	    	mainHeader.removeClass('is-hidden');
+	    } else if( currentTop - previousTop > scrollDelta && currentTop > scrollOffset) {
+	    	//if scrolling down...
+	    	mainHeader.addClass('is-hidden');
+	    }
+	}
 
-        if (element.className.indexOf(className) === -1) {
-            addClass(element, className);
-        } else {
-            removeClass(element, className);
-        }
-    }
+	function checkStickyNavigation(currentTop) {
+		//secondary nav below intro section - sticky secondary nav
+		var secondaryNavOffsetTop = belowNavHeroContent.offset().top - secondaryNavigation.height() - mainHeader.height();
+		
+		if (previousTop >= currentTop ) {
+	    	//if scrolling up... 
+	    	if( currentTop < secondaryNavOffsetTop ) {
+	    		//secondary nav is not fixed
+	    		mainHeader.removeClass('is-hidden');
+	    		secondaryNavigation.removeClass('fixed slide-up');
+	    		belowNavHeroContent.removeClass('secondary-nav-fixed');
+	    	} else if( previousTop - currentTop > scrollDelta ) {
+	    		//secondary nav is fixed
+	    		mainHeader.removeClass('is-hidden');
+	    		secondaryNavigation.removeClass('slide-up').addClass('fixed'); 
+	    		belowNavHeroContent.addClass('secondary-nav-fixed');
+	    	}
+	    	
+	    } else {
+	    	//if scrolling down...	
+	 	  	if( currentTop > secondaryNavOffsetTop + scrollOffset ) {
+	 	  		//hide primary nav
+	    		mainHeader.addClass('is-hidden');
+	    		secondaryNavigation.addClass('fixed slide-up');
+	    		belowNavHeroContent.addClass('secondary-nav-fixed');
+	    	} else if( currentTop > secondaryNavOffsetTop ) {
+	    		//once the secondary nav is fixed, do not hide primary nav if you haven't scrolled more than scrollOffset 
+	    		mainHeader.removeClass('is-hidden');
+	    		secondaryNavigation.addClass('fixed').removeClass('slide-up');
+	    		belowNavHeroContent.addClass('secondary-nav-fixed');
+	    	}
 
-    // Open Twitter/share in a Pop-Up
-    var $popup = document.getElementsByClassName('popup')[0];
-    if (!$popup) {
-        return;
-    }
-    $popup.addEventListener('click', function(e) {
-        e.preventDefault()
-        var width  = 575,
-            height = 400,
-            left   = (document.documentElement.clientWidth  - width)  / 2,
-            top    = (document.documentElement.clientHeight - height) / 2,
-            url    = this.href,
-            opts   = 'status=1' +
-                     ',width='  + width  +
-                     ',height=' + height +
-                     ',top='    + top    +
-                     ',left='   + left;
-
-        window.open(url, 'twitter', opts);
-
-        return false;
-    });
-}
+	    }
+	}
+});
