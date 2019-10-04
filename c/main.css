@@ -120,10 +120,14 @@ header li:nth-last-of-type(1) {
 }
 
 article {
-		margin: 0 0 .675em;
+	margin: 0 0 .675em;
 }
 
-footer{
+aside article {
+    	margin: 0 0 1.825em;
+}
+
+footer {
 	font-size: .975em;
 	background: #eef4ff;
 	padding: 1.625em 2em;
@@ -146,7 +150,6 @@ img {
 	  display: grid;
 	  grid-template-columns: 1.75fr 1fr;
 	  grid-column-gap: 3.125em;
-	  max-width: 800px;
 }
 
 header {
@@ -166,6 +169,10 @@ aside article, {
 aside article:last-of-type(1) {
 	margin: 0;
 }
+
+section.experience {
+	max-width: 600px;
+} 
 
 /* RESPONSIVE */
 
