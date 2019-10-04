@@ -17,14 +17,6 @@ body {
 
 }
 
-main {
-	margin: 0 0 1.325em;
-	padding: 2em 2em 0 2em;
-}
-
-main h2 {
-	color: #83A9EF;
-}
 
 h1 {
     font-family: 'Karla', sans-serif;
@@ -46,6 +38,9 @@ h2, ul a {
 	text-transform: uppercase;
 }
 
+main h2 {
+	color: #83A9EF;
+}
 
 h3 {
     font-family: 'Karla', sans-serif;
@@ -98,14 +93,11 @@ a:hover {
 
 
 header a {
-
+	text-decoration: none;
 	font-size: .875em;
 
 }
 
-header, aside {
-	margin: 0 0 1.125em;
-}
 
 
 header li {
@@ -119,12 +111,54 @@ header li:nth-last-of-type(1) {
 	padding: 4px 8px;
 }
 
+img {
+
+}
+
+/* CSS GRID and LAYOUT */
+
+.grid-container {
+	  display: grid;
+	  grid-template-columns: 1.75fr 1fr;
+	  grid-column-gap: 3.125em;
+}
+
+main {
+	padding: 2em 2em 0 2em;
+}
+
+header {
+	grid-column: 1 / 3;
+	margin: 0 0 1.825em;
+}
+
+header, aside {
+	margin: 0 0 1.125em;
+}
+
+
+aside article, {
+	margin: 0 0 1.625em;
+}
+
+
+aside article:last-of-type(1) {
+	margin: 0;
+}
+
+
 article {
 	margin: 0 0 .675em;
 }
 
 aside article {
     	margin: 0 0 1.825em;
+}
+
+
+section.experience {
+	max-width: 600px;
+	margin: 0 0 1.625em;
 }
 
 footer {
@@ -138,41 +172,6 @@ footer {
 footer p:nth-last-of-type(1) {
 	font-size: .625em;
 }
-
-img {
-	max-width: 100%;
-}
-
-
-/* CSS GRID */
-
-.grid-container {
-	  display: grid;
-	  grid-template-columns: 1.75fr 1fr;
-	  grid-column-gap: 3.125em;
-}
-
-header {
-	grid-column: 1 / 3;
-	margin: 0 0 1.825em;
-}
-
-header a {
-	text-decoration: none;
-}
-
-aside article, {
-	margin: 0 0 1.625em;
-}
-
-
-aside article:last-of-type(1) {
-	margin: 0;
-}
-
-section.experience {
-	max-width: 600px;
-} 
 
 /* RESPONSIVE */
 
