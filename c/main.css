@@ -68,7 +68,7 @@ h5 {
 p {
     font-family: 'Karla', sans-serif;
 	font-size: 0.875em;
-	line-height: 1.375em;
+	line-height: 1.475em;
 	margin: 0 0 0.625em;
 }
 
@@ -148,7 +148,7 @@ aside article:last-of-type(1) {
 
 
 article {
-	margin: 0 0 .675em;
+	margin: 0 0 1em;
 }
 
 aside article {
