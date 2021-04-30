@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap');
+
+@font-face {
+    font-family: 'iAWriter';
+    src: url('font/iAWriterQuattroS-Regular.woff') format('woff'),
+         url('font/iAWriterQuattroS-Regular.woff2') format('woff2'),
+         url('font/iAWriterQuattroS-Regular.ttf') format('truetype');     
+}
+
+
+html, body {
+  background: #eef4ff;
+  background: snow;
+  font-family: 'Sunflower', sans-serif;
+  font-weight: 300;
+  color: #1c2060;
+ /** font-family: iAWriter, sans-serif !important;**/
+
+}
+
+a {color: salmon}
+
+.sv-document-nav-title a {
+  color: #8c9fb8;
+}
+
+.sv-document-nav-title a:hover {
+  color: #1c2060;
+  transition: .2s linear;
+}
+
+p, li:not(.sv-document-nav-item){
+  font-size: 18px !important;
+}
+
+li.sv-document-nav-item:last-of-type {
+
+  display:none;
+
+}
+ 
+h1, h2, h3, h4, h5, h6, .sv-document-nav-title, .sv-document-nav-item {
+  font-family: 'Song Myung', serif;
+}
+
+h2 {
+  color: #8c9fb8;
+  color: salmon;
+}
+
+
+.sv-document-nav-title,
+.sv-document-nav-items, .sv-document-article {
+  background: #eef4ff;
+  background: snow;
+}
+
+caption {
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+}
+
+#btn-resume{
+    float: right;
+    font-size: 15px;
+    text-transform: uppercase;
+    background: none;
+    padding: 5px 5px;
+    border: none;
+    color: salmon;
+    margin: 10px 0 0 10px;
+    text-decoration: none;
+  }
+
+  #btn-resume:hover{
+    opacity: .7;
+    transition: .2s linear;
+  }
+
+
+.sv-document-nav-item a {
+     color: #1c2060;
+  }
+
+  .sv-document-nav-item a:hover {
+     color: #8c9fb8;
+     transition: .2s linear;
+  }
+
+  hr {
+    border-top: 1px solid salmon !important;
+  }
+
+  .retro-frame {
+    box-shadow: 8px 8px #fa80727a;
+    border: 1px solid;
+    padding: 10px;
+  }
+
+  ::selection {
+    background: #fa80727a; /* WebKit/Blink Browsers */
+  }
+  
+  ::-moz-selection {
+    background: #fa80727a; /* Gecko Browsers */
+  }
+
+/*
+  Mobile First!
+
+  Include your desktop styles here
+*/
+@media screen and (min-width: 768px){
+  body {
+    background: ;
+  }
+
+  .sv-document-nav-title,
+  .sv-document-nav-items {
+    background: transparent;
+  }
+
+  
+  .stack-col-2 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 5px;
+    margin: 0 -10px;
+  }
+
+  p, li:not(.sv-document-nav-item){
+    font-size: 18px !important;
+  }
+
+  li.sv-document-nav-item {
+    font-size: 24px;
+  }
+
+  caption {
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+  }
+
+}
